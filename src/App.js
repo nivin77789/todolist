@@ -70,9 +70,6 @@ function App() {
               <h1>{user.name}</h1>
             </center>
             <h3>@{user.login}</h3>
-          </div>
-          <div className="right">
-            <h2>Github User Details</h2>
             <div className="sub-right">
               <table>
                 <tr>
@@ -86,9 +83,23 @@ function App() {
                   <td className="td3">{user.following}</td>
                 </tr>
               </table>
-              <h3>
+              <h2>
                 Since : <span>{user.created_at}</span>
-              </h3>
+              </h2>
+            </div>
+          </div>
+          <div className="right">
+            <div className="sub-righ">
+              <div className="img-d">
+                <img
+                  src={`https://github-readme-streak-stats.herokuapp.com?user=${user.login}&theme=github-dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D`}
+                  alt="q"
+                />
+                <img
+                  src={`https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&theme=github_dark&hide_border=true`}
+                  alt="ew"
+                />
+              </div>
             </div>
           </div>
         </div>
